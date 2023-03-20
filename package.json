@@ -6,7 +6,7 @@
   "author": "Mts-Carneiro <mtscrn21@gmail.com\n\ngit config --global user.email mtscrn21@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --ignore-watch node_modules src/server.ts",
+    "dev": "ts-node-dev --ignore-watch node_modules src/app.ts",
     "build": "tsc",
     "typeorm": "typeorm-ts-node-commonjs",
     "test": "cross-env NODE_ENV=test SECRET_KEY=secret_key jest --verbose --runInBand"
@@ -18,7 +18,8 @@
     "pg": "^8.10.0",
     "process": "^0.11.10",
     "reflect-metadata": "^0.1.13",
-    "typeorm": "^0.3.11"
+    "typeorm": "^0.3.11",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@types/express": "^4.17.17",

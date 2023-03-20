@@ -6,22 +6,22 @@ class Contact {
 
 
     @PrimaryGeneratedColumn('uuid')
-    id!: string 
+    id: string 
 
     @Column()
-    name!: string 
+    name: string 
 
     @Column()
-    email!: string
+    email: string
 
     @Column()
-    phone!: number
+    phone: number
 
     @CreateDateColumn()
-    createdAt!: Date
+    createdAt: Date
 
     @ManyToOne(() => User)
-    user!: User
+    user: User
 }
 
 export { Contact }

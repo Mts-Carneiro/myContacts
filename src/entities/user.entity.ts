@@ -2,27 +2,27 @@ import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, OneToMany } f
 import { Contact } from './contact.entity'
 
 
-@Entity('Users')
+@Entity('User')
 class User {
 
 
     @PrimaryGeneratedColumn("uuid")
-    id!: string
+    id: string
 
     @Column()
-    name!: string
+    name: string
 
     @Column()
-    email!: string
+    email: string
 
     @Column()
-    phone!: string
+    phone: number
 
     @CreateDateColumn()
-    createdAt!: Date
+    createdAt: Date
 
     @OneToMany(() => Contact, contact => contact.user)
-    contacts!: Contact[]
+    contacts: Contact[]
 
 }
 
