@@ -1,21 +1,19 @@
 import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, OneToMany } from 'typeorm'
 import { Contact } from './contact.entity'
 
-
 @Entity('User')
 class User {
-
 
     @PrimaryGeneratedColumn("uuid")
     id: string
 
-    @Column()
+    @Column({ length: 45 })
     name: string
 
-    @Column()
+    @Column({ length: 45, unique: true })
     email: string
 
-    @Column()
+    @Column({ unique: true })
     phone: number
 
     @CreateDateColumn()

@@ -13,6 +13,5 @@ app.use('/user', userRoutes)
 app.use('/contact', contactsRoutes)
 
 app.use(handleErrors)
-app.listen(3000, () => {
-    console.log('Server running in port 3000')
-})
+
+export default app
