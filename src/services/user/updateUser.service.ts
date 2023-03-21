@@ -6,13 +6,19 @@ import { returnedUserScherma } from "../../schemas/user.schema";
 
 
 const updateUserService =async (newUserData:IUserUpdate, userId:string): Promise<IUserReturn> => {
-    const userRepository = AppDataSource.getRepository(User)
 
-    const oldUser = await userRepository.findOneBy({
-        id: userId
+    const userRepository:Repository<User> = AppDataSource.getRepository(User)
+
+    const oldUser = await userRepository.findOne({
+        where:{
+            id: userId
+        },
+        relations:{
+            contacts:true
+        }
     })
 
-    const user = userRepository.create({
+    const user:IUser = userRepository.create({
         ...oldUser,
         ...newUserData
     })

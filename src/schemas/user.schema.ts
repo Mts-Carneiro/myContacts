@@ -1,4 +1,6 @@
 import {z} from 'zod'
+import { returnedcontactScherma } from './contact.schema'
+
 
 const userSchema = z.object({
     name: z.string().min(3).max(120),
@@ -13,7 +15,8 @@ const returnedUserScherma = userSchema.extend({
     name: z.string(),
     email: z.string(),
     phone: z.number(),
-    createdAt: z.date()
+    createdAt: z.date(),
+    contacts: returnedcontactScherma.nullish().array()
 })
 
 const returnMultpleuserScherma = returnedUserScherma.array()
