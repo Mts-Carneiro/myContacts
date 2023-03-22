@@ -31,9 +31,10 @@
     "typeorm": "^0.3.11",
     "typescript": "^5.0.2",
     "validator": "^13.9.0",
-    "zod": "^3.21.4"
+    "zod": "^3.21.4",
+    "@types/cors": "^2.8.13"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.13"
+    
   }
 }
