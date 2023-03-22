@@ -12,7 +12,17 @@ const createUserService =async (userData: IUser): Promise<IUserReturn> => {
     
     await userRepository.save(user)
 
-    const newUser = returnedUserScherma.parse(user)
+    const getUser = userRepository.findOne({
+        where:{
+            id: user.id
+        },
+        relations:{
+            contacts:true
+        }
+        
+    })
+
+    const newUser = returnedUserScherma.parse(getUser)
 
     return newUser
 }
