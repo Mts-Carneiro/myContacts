@@ -8,9 +8,10 @@
   "scripts": {
     "dev": "ts-node-dev --ignore-watch node_modules --cls --rs src/server.ts",
     "typeorm": "typeorm-ts-node-commonjs",
-    "test": "cross-env NODE_ENV=test SECRET_KEY=secret_key jest --verbose --runInBand",
+    "test": "jest --verbose --runInBand",
     "build": "tsc",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "migration:prod": "yarn typeorm migration:run -d dist/data-source"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
