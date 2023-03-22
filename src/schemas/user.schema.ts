@@ -10,6 +10,14 @@ const userSchema = z.object({
 
 const userUpdateScherma = userSchema.partial()
 
+const returnCreateUser = userSchema.extend({
+    id: z.string(),
+    name: z.string(),
+    email: z.string(),
+    phone: z.number(),
+    createdAt: z.date()
+})
+
 const returnedUserScherma = userSchema.extend({
     id: z.string(),
     name: z.string(),
@@ -23,5 +31,5 @@ const returnMultpleuserScherma = returnedUserScherma.array()
 
 
 export {
-    userSchema, userUpdateScherma, returnMultpleuserScherma, returnedUserScherma
+    userSchema, userUpdateScherma, returnMultpleuserScherma, returnedUserScherma, returnCreateUser
 }
