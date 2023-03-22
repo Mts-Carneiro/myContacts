@@ -16,7 +16,7 @@ const returnedUserScherma = userSchema.extend({
     email: z.string(),
     phone: z.number(),
     createdAt: z.date(),
-    contacts: returnedcontactScherma.nullish().array()
+    contacts: returnedcontactScherma.nullable().array()
 })
 
 const returnMultpleuserScherma = returnedUserScherma.array()
