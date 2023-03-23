@@ -8,10 +8,10 @@ import userRoutes from "./routes/user.routes";
 import { handleErrors } from "./erros";
 
 const app = express();
+app.use(cors());
 
 app.use(express.json());
 
-app.use(cors());
 
 /* app.use(function(req, res, next) {
     res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE');
