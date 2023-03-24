@@ -15,12 +15,12 @@ class Contact {
     email: string
 
     @Column()
-    phone: number
+    phone: string
 
     @CreateDateColumn()
     createdAt: Date
 
-    @ManyToOne(() => User)
+    @ManyToOne(() => User,{onDelete:"CASCADE"})
     user: User
 }
 

@@ -14,7 +14,7 @@ class User {
     email: string
 
     @Column({ unique: true })
-    phone: number
+    phone: string
 
     @CreateDateColumn()
     createdAt: Date

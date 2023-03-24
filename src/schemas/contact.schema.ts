@@ -4,7 +4,7 @@ import { userSchema } from './user.schema'
 const contactSchema = z.object({
     name: z.string().min(3).max(120),
     email: z.string().email(),
-    phone: z.number(),
+    phone: z.string(),
     user: z.any()
 })
 
@@ -14,7 +14,7 @@ const returnedcontactScherma = contactSchema.extend({
     id: z.string(),
     name: z.string(),
     email: z.string(),
-    phone: z.number(),
+    phone: z.string(),
     createdAt: z.date()
 })
 
