@@ -19,7 +19,7 @@ class User {
     @CreateDateColumn()
     createdAt: Date
 
-    @OneToMany(() => Contact, (contact) => contact.user, {cascade:true})
+    @OneToMany(() => Contact, (contacts) => contacts.user, {cascade:true})
     contacts: Contact[]
 
 }
