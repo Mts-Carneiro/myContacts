@@ -1,5 +1,4 @@
 import {z} from 'zod'
-import { userSchema } from './user.schema'
 
 const contactSchema = z.object({
     name: z.string().min(3).max(120),
