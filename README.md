@@ -34,7 +34,7 @@ https://mycontacts-api-u7ov.onrender.com
 
 Diagrama ER da API definindo bem a relação entre as tabelas de banco de dados.
 
-![DER].(DER.drawio.pgn)
+![DER].(DER.drawio.png)
 
 ---
 
